@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <title>Welcome To WorldNews</title>
+  <link rel="stylesheet" href="newsCSS.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <img src="images/newsicon.png" width="50px" height="45px" alt="News Icon">
+    <a class="navbar-brand" href="#">WorldNews</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="loginHTML.html">Login</a>
+        </li>
+
+      </ul>
+
+    </div>
+  </nav>
+
+  <div class="container my-3">
+
+    <h1 id="h1" >Top News : <span id="worldnews" class="badge badge-secondary">WorldNews</span></h1>
+    <hr>
+    <h3 id="h3" >Select Category : </h3>
+    <select name="category" id="category" >
+      <option value="entertainment">Entertainment</option>
+      <option value="business">Business</option>
+      <option value="technology">Technology</option>
+      <option value="sports">Sports</option>
+      <option value="science">Science</option>
+      <option value="health">Health</option>
+    </select>
+
+    <div class="gridview my-3">
+      <div class="griditems" onclick="myfunc(document.getElementById('india').value,document.getElementById('category').value)">
+        <input type="image" src="images/in-flag.png" value="in" alt="India" width="188" height="98" id="coin">
+        <h1>India</h1>
+      </div>
+      <div class="griditems" onclick="myfunc(document.getElementById('usa').value,document.getElementById('category').value)">
+        <input type="image" src="images/us-flag.png" value="us" alt="USA" width="188" height="98" id="cous">
+        <h1>USA</h1>
+      </div>
+      <div class="griditems" onclick="myfunc(document.getElementById('china').value,document.getElementById('category').value)">
+        <input type="image" src="images/ch-flag.png" value="cn" alt="China" width="188" height="98" id="cocn">
+        <h1>China</h1>
+      </div>
+      <div class="griditems" onclick="myfunc(document.getElementById('uk').value,document.getElementById('category').value)">
+        <input type="image" src="images/uk-flag.png" value="gb" alt="UK" width="188" height="98" id="cogb">
+        <h1>UK</h1>
+      </div>
+      <div class="griditems" onclick="myfunc(document.getElementById('turkey').value,document.getElementById('category').value)">
+        <input type="image" src="images/tu-flag.png" value="tr" alt="Turkey" width="188" height="98" id="cotr">
+        <h1>Turkey</h1>
+      </div>
+      <div class="griditems" onclick="myfunc(document.getElementById('southkorea').value,document.getElementById('category').value)">
+        <input type="image" src="images/ks-flag.png" value="kr" alt="South Korea" width="188" height="98" id="cokr">
+        <h1>South Korea</h1>
+      </div>
+    </div>
+    <h3 id="h32" >Select Another Country : </h3>
+    <select name="country" id="country" >
+      <option value="none">Select</option>
+      <option value="jp">Japan</option>
+      <option value="in" id="india">India</option>
+      <option value="us" id="usa">USA</option>
+      <option value="gb" id="uk">UK</option>
+      <option value="cn" id="china">China</option>
+      <option value="tr" id="turkey">Turkey</option>
+      <option value="kr" id="southkorea">South Korea</option>
+      <option value="au">Australia</option>
+      <option value="ar">Argentina</option>
+      <option value="at">Austria</option>
+      <option value="cu">Cuba</option>
+      <option value="eg">Egypt</option>
+      <option value="fr">France</option>
+      <option value="sa">Saudi Arabia</option>
+      <option value="sg">Singapore</option>
+    </select>
+    <button id="button1"  class="btn btn-outline-success my-2 my-sm-0" type="submit"
+      onclick="myfunc(document.getElementById('country').value,document.getElementById('category').value)"><b>Search</b></button>
+    <div class="accordion" id="newsAccordion"></div>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <!-- Javascript Code Started -->
+  <script src="newsJS.js"></script>
+</body>
+
+</html>

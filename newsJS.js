@@ -2,7 +2,7 @@
 function myfunc(a, ctgry) {
     // Initialize the news api parameters
     let country = a;
-    let apiKey = '1cd54373d5ba4c0b944c396958fceedf'
+    let apiKey = 'Your API Key'
     let category = ctgry;
     // Grab the news container
     let newsAccordion = document.getElementById('newsAccordion');
